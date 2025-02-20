@@ -19,8 +19,9 @@ const ContactLeft = () => {
         <h3 className="text-3xl font-bold text-white">Samsul Alam</h3>
         <p className="text-lg font-normal text-gray-400">Front-End-Developer</p>
         <p className="text-base text-gray-400 tracking-wide">
-          Lorem ipsum, dolor sit amet consectetur cupiditate explicabo veniam
-          molestias laudantium soluta qui omnis! Quod.
+          Proficient front-end developer with a passion for immersive digital
+          experiences and a solid foundation in HTML, CSS, JavaScript, React,
+          Redux, and Nodejs
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
           Phone: <span className="text-lightText">+91 8167786956</span>

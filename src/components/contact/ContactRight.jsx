@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { p } from "framer-motion/client";
 
 const ContactRight = () => {
   const [username, setUsername] = useState("");
@@ -18,45 +17,79 @@ const ContactRight = () => {
   };
   // **************Email validation end here************
 
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
 
     if (username === "") {
       setErrMsg("username is Required!");
-      console.log(errMsg);
+      return;
     } else if (phoneNumber === "") {
       setErrMsg("phoneNumber is Required!");
-      console.log(errMsg);
+      return;
     } else if (email === "") {
       setErrMsg("Fill your email address");
-      console.log(errMsg);
+      return;
     } else if (!emailValidation(email)) {
       setErrMsg("give a valid email!");
-      console.log(errMsg);
+      return;
     } else if (subject === "") {
       setErrMsg("add a subject!");
-      console.log(errMsg);
+      return;
     } else if (message === "") {
       setErrMsg("Message is required!");
-      console.log(errMsg);
-    } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your message has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      return;
+    }
+    //   else {
+    //     setSuccessMsg(
+    //       `Thank you dear ${username}, Your message has been sent Successfully!`
+    //     );
+    //     setErrMsg("");
+    //     setUsername("");
+    //     setPhoneNumber("");
+    //     setEmail("");
+    //     setSubject("");
+    //     setMessage("");
+    //   }
+    // };
+
+    try {
+      const formData = new FormData();
+      formData.append("username", username);
+      formData.append("phoneNumber", phoneNumber);
+      formData.append("email", email);
+      formData.append("subject", subject);
+      formData.append("message", message);
+
+      const response = await fetch("https://getform.io/f/bvrwwmmb", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSuccessMsg(`Thank you, ${username}! Your message has been sent.`);
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        setErrMsg("Something went wrong! Please try again.");
+      }
+    } catch (error) {
+      setErrMsg("Failed to send message! Please check your connection.");
     }
   };
+
   return (
     <div
       className="w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne
                     p-8 rounded-lg  flex flex-col gap-8 "
     >
-      <form className="w-full flex flex-col gap-6 py-5">
+      <form
+        action="https://getform.io/f/bvrwwmmb"
+        method="POST"
+        className="w-full flex flex-col gap-6 py-5"
+      >
         {errMsg && (
           <p
             className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne 
@@ -81,6 +114,7 @@ const ContactRight = () => {
             <input
               onChange={(e) => setUsername(e.target.value)}
               value={username}
+              name="username"
               className={`${
                 errMsg === "username is Required!" && "outline-designColor"
               } contactInput`}
@@ -94,6 +128,7 @@ const ContactRight = () => {
             <input
               onChange={(e) => setPhoneNumber(e.target.value)}
               value={phoneNumber}
+              name="phoneNumber"
               className={`${
                 errMsg === "phoneNumber is Required!" && "outline-designColor"
               } contactInput`}
@@ -106,6 +141,7 @@ const ContactRight = () => {
           <input
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            name="email"
             className={`${
               errMsg === "Fill your email address" && "outline-designColor"
             } contactInput`}
@@ -119,6 +155,7 @@ const ContactRight = () => {
           <input
             onChange={(e) => setSubject(e.target.value)}
             value={subject}
+            name="subject"
             className={`${
               errMsg === "add a subject!" && "outline-designColor"
             } contactInput`}
@@ -132,6 +169,7 @@ const ContactRight = () => {
           <textarea
             onChange={(e) => setMessage(e.target.value)}
             value={message}
+            name="message"
             className={`${
               errMsg === "Message is required!" && "outline-designColor"
             } contactInput`}
@@ -141,6 +179,7 @@ const ContactRight = () => {
         </div>
         <div>
           <button
+            type="submit"
             onClick={handleSend}
             className="w-full h-12 rounded-lg text-base  bg-[#141518] text-gray-400 tracking-wider
                 uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor

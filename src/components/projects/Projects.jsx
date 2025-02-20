@@ -28,8 +28,8 @@ const Projects = () => {
           des="A modern, fully responsive portfolio website built with React and Tailwind CSS. Features include 
           smooth animations, dynamic project showcase, and a contact form integration."
           src={projectOne}
-          github=""
-          demo=""
+          github="https://github.com/Samsul7718/Sam_Portfolio"
+          demo="https://sam-portfolio-zeta.vercel.app/"
         />
         <ProjectCard
           title="Weather App"
