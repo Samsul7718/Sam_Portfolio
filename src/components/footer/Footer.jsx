@@ -45,18 +45,20 @@ const Footer = () => {
             </span>
           </li>
           <li>
-            <span
-              className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
-            relative group"
-            >
-              Portfolio{" "}
+            <a href="https://sam-portfolio-zeta.vercel.app/">
               <span
-                className="absolute h-[1px] w-full inline-flex bg-designColor -bottom-1 left-0
+                className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
+            relative group"
+              >
+                Portfolio{" "}
+                <span
+                  className="absolute h-[1px] w-full inline-flex bg-designColor -bottom-1 left-0
               -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"
-              ></span>
-            </span>
+                ></span>
+              </span>
+            </a>
           </li>
-          <li>
+          {/* <li>
             <span
               className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
             relative group"
@@ -67,7 +69,7 @@ const Footer = () => {
               -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"
               ></span>
             </span>
-          </li>
+          </li> */}
           <li>
             <span
               className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
@@ -135,7 +137,7 @@ const Footer = () => {
               ></span>
             </span>
           </li>
-          <li>
+          {/* <li>
             <span
               className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
             relative group"
@@ -146,7 +148,7 @@ const Footer = () => {
               -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"
               ></span>
             </span>
-          </li>
+          </li> */}
           <li>
             <span
               className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
@@ -214,7 +216,7 @@ const Footer = () => {
               ></span>
             </span>
           </li>
-          <li>
+          {/* <li>
             <span
               className="w-full text-lg hover:text-designColor duration-300 cursor-pointer 
             relative group"
@@ -225,7 +227,7 @@ const Footer = () => {
               -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"
               ></span>
             </span>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

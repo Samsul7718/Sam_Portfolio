@@ -43,21 +43,21 @@ const Education = () => {
       <div>
         <div className="py-12 font-titleFont flex flex-col gap-4">
           <p className="text-sm text-designColor tracking-[4px]">2022-2024</p>
-          <h2 className="text-4xl font-bold">Job Experience</h2>
+          <h2 className="text-4xl font-bold">Internship Experience</h2>
         </div>
         <div
           className="w-full mt-14 h-[1000px] border-l-[6px] border-l-black
       border-opacity-30 flex flex-col gap-10"
         >
           <ResumeCard
-            title="Front-end Developer"
+            title="Internship"
             subTitle="The Entrepreneurship Network (July 2024 - Oct 2024)"
             result="Remote"
             des="I worked as a frontend developer in different project.I build a team and worked in a 
             group in Decodage project and TEN MENTOR (React)"
           />
           <ResumeCard
-            title="Front-end Developer"
+            title="Internship"
             subTitle="Oasis Infobyte (Oct 2023 - Nov 2023)"
             result="Remote"
             des="I successfully completed my frontend web development internship with project.

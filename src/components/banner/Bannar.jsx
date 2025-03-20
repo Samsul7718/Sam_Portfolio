@@ -1,6 +1,6 @@
 import React from "react";
 import LeftBannar from "./LeftBannar";
-import { RightBanner } from "./RightBanner";
+// import { RightBanner } from "./RightBanner";
 
 const Bannar = () => {
   return (
@@ -11,7 +11,7 @@ const Bannar = () => {
     >
       <div className="flex w-full max-w-screen-2xl mx-auto">
         <LeftBannar />
-        <RightBanner />
+        {/* <RightBanner /> */}
       </div>
     </section>
   );

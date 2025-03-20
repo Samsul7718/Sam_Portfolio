@@ -32,13 +32,14 @@ const Projects = () => {
           demo="https://sam-portfolio-zeta.vercel.app/"
         />
         <ProjectCard
-          title="Weather App"
-          des="A real-time weather application built with React and OpenWeather API. Displays current weather 
-          conditions, temperature, and forecasts for any location with a clean, responsive UI."
+          title="User Data Management"
+          des="A user data management system built with React, Tailwind, and Firebase. Features include user 
+          informatio with real time data, user authentication, and a clean, intuitive UI."
           src={projectTwo}
-          github="https://github.com/Samsul7718/weather-app.git"
-          demo="https://samsul7718-weather-app.netlify.app/"
+          github="https://github.com/Samsul7718/user_management"
+          demo="https://user-management-eight-tau.vercel.app/"
         />
+
         <ProjectCard
           title="React Calculator"
           des="A simple and interactive calculator built with React. Supports basic arithmetic operations, 
@@ -48,20 +49,20 @@ const Projects = () => {
           demo="https://react-calculator-app1.netlify.app/"
         />
         <ProjectCard
-          title="Today's Target"
-          des="A simple and efficient task management app built with React. Allows users to set daily goals, 
+          title="React Todo App"
+          des="A simple and efficient task management app built with React. Allows users to  add tasks,
           track progress, and stay organized with an intuitive interface."
           src={projectFour}
-          github="https://github.com/Samsul7718/Today-s-task.git"
-          demo="https://today-target.netlify.app/"
+          github="https://github.com/Samsul7718/React-ToDoList"
+          demo="https://react-to-do-list-ten-eta.vercel.app/"
         />
         <ProjectCard
-          title="React Task Tracker"
-          des="A user-friendly task management app built with React. Features include adding, editing, deleting
-           tasks, and marking them as completed, with a clean and responsive UI."
+          title="Weather App"
+          des="A real-time weather application built with React and OpenWeather API. Displays current weather 
+          conditions, temperature, and forecasts for any location with a clean, responsive UI."
           src={projectFive}
-          github="https://github.com/Samsul7718/react-task-tracker.git"
-          demo="https://react-task-tracker12.netlify.app/"
+          github="https://github.com/Samsul7718/weather-app.git"
+          demo="https://samsul7718-weather-app.netlify.app/"
         />
         <ProjectCard
           title="IMDB Clone"
