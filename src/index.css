@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Moves particles behind other elements */
+}
+
 @layer components {
   .bannerIcon {
     @apply w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl inline-flex items-center 
