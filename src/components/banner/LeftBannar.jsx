@@ -38,11 +38,11 @@ const LeftBannar = () => {
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
           Proficient front-end developer with a passion for immersive digital
-          experiences and a solid foundation in HTML, CSS, JavaScript, React,
-          Redux, and Nodejs. Committed to staying updated and collaborating with
-          talented teams to bring innovative ideas to life, I contribute
-          creatively with dedication and attention to detail,making a meaningful
-          impact in front-end development.
+          experiences and a solid foundation in HTML,Tailwind CSS, JavaScript,
+          React, Redux,Material UI, Nodejs and Firebase . Committed to staying
+          updated and collaborating with talented teams to bring innovative
+          ideas to life, I contribute creatively with dedication and attention
+          to detail,making a meaningful impact in front-end development.
         </p>
       </div>
       <div className="flex justify-between items-end">
